@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="reinahstyles.css">
+</head>
+<body>
+    <!-- Notification Element -->
+    <div id="notification" class="notification" aria-live="polite" aria-atomic="true"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Search Functionality -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+                    <button id="search-button" aria-label="Search">Search</button>
+                </div>
+        
+                <!-- Icons Container -->
+                <div class="icons-container">
+                    <button id="menu-icon" aria-label="Open Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <button id="cart-icon" aria-label="View Cart">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </nav>   
+        </div>
+        <div class="overlay" id="myNav" role="dialog" aria-modal="true" aria-hidden="true">
+            <button class="closebtn" aria-label="Close navigation menu">&times;</button>
+            <div class="overlay-content">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="reinah.html#home">Home</a></li>
+                    <li><a href="reinah.html#products">Products</a></li>
+                    <li><a href="reinah.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal" role="dialog" aria-labelledby="cartModalTitle" aria-hidden="true" tabindex="-1">
+        <div class="modal-content">
+            <span class="close" aria-label="Close cart modal">&times;</span>
+            <h2 id="cartModalTitle">Your Cart</h2>
+            <div id="cart-items"></div> <!-- Container for cart items -->
+            <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+    <section class="products-section" id="products">
+    <div class="products">
+        <h2>Men's Shoes.</h2>
+        <hr class="center-hr">
+    </div>
+    <div class="product_grid">
+        <div class="product">
+            <img src="open-shoes.jpg" alt="Open Shoes" loading="lazy">
+            <h3>Open Shoes</h3>
+            <p>Brown</p>
+            <p>Available in sizes 39,40,41 and 42.</p>
+            <p class="price">KES 999.00</p>
+            <button class="add-to-cart-btn" data-name="Open Shoes-Brown" data-price="999.00" aria-label="Add Open Shoes-Brown to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="open-shoe-black.jpg" alt="Open Shoes" loading="lazy">
+            <h3>Open Shoes</h3>
+            <p>Black</p>
+            <p>Available in sizes 39, 40, 41 and 42.</p>
+            <p class="price">KES 999.00</p>
+            <button class="add-to-cart-btn" data-name="Open Shoes-Black" data-price="999.00" aria-label="Add Open Shoes-Black to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="slides-black-pure.jpg" alt="Slides-Black" loading="lazy">
+            <h3>Modern Slides.</h3>
+            <p>Black</p>
+            <p>Available in sizes 39,40,41 and 42.</p>
+            <p class="price">KES 1,499.00</p>
+            <button class="add-to-cart-btn" data-name="Slides-Black" data-price="1,499.00" aria-label="Add Slides-Black to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="slides-black-brown.jpg" alt="Slides-Black-Brown" loading="lazy">
+            <h3>Modern Slides</h3>
+            <p>Black-Brown</p>
+            <p>Available in sizes 39,40,41 and 42.</p>
+            <p class="price">KES 1,499.00</p>
+            <button class="add-to-cart-btn" data-name="Slides-Black-Brown" data-price="1,499.00" aria-label="Add Slides-Black-Brown to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="slides-black.jpg" alt="Slides-Black-White" loading="lazy">
+            <h3>Modern Slides</h3>
+            <p>Black-White</p>
+            <p>Available in sizes 39,40,41 and 42.</p>
+            <p class="price">KES 1,499.00</p>
+            <button class="add-to-cart-btn" data-name="Slides-Black-White" data-price="1,499.00" aria-label="Add Slides-Black-White to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="slides-cream.jpg" alt="Slides-Yellow-Blue" loading="lazy">
+            <h3>Modern Slides</h3>
+            <p>Yellow-Blue</p>
+            <p>Available in sizes 39,40,41 and 42.</p>
+            <p class="price">KES 1,499.00</p>
+            <button class="add-to-cart-btn" data-name="Slides-Yellow-Blue" data-price="1,499.00" aria-label="Add Slides-Yellow-Blue to cart">Add to Cart</button>
+        </div>
+    </div>
+    </section>
+    <script src="reinah_script.js"></script>
+</body>
+</html>

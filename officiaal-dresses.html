@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="reinahstyles.css">
+</head>
+<body>
+    <!-- Notification Element -->
+    <div id="notification" class="notification" aria-live="polite" aria-atomic="true"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Search Functionality -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+                    <button id="search-button" aria-label="Search">Search</button>
+                </div>
+        
+                <!-- Icons Container -->
+                <div class="icons-container">
+                    <button id="menu-icon" aria-label="Open Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <button id="cart-icon" aria-label="View Cart">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </nav>   
+        </div>
+        <div class="overlay" id="myNav" role="dialog" aria-modal="true" aria-hidden="true">
+            <button class="closebtn" aria-label="Close navigation menu">&times;</button>
+            <div class="overlay-content">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="reinah.html#home">Home</a></li>
+                    <li><a href="reinah.html#products">Products</a></li>
+                    <li><a href="reinah.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal" role="dialog" aria-labelledby="cartModalTitle" aria-hidden="true" tabindex="-1">
+        <div class="modal-content">
+            <span class="close" aria-label="Close cart modal">&times;</span>
+            <h2 id="cartModalTitle">Your Cart</h2>
+            <div id="cart-items"></div> <!-- Container for cart items -->
+            <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+    <section class="products-section" id="products">
+    <div class="products">
+        <h2>Official Skirts</h2>
+        <hr class="center-hr">
+    </div>
+    <div class="product_grid">
+        <div class="product">
+            <img src="official.jpg" alt="Elegant Navy Midi" loading="lazy">
+            <h3>Elegant Navy Midi</h3>
+            <p>Available in sizes X, XXL, XL and L.</p>
+            <p class="price">KES 549.00</p>
+            <button class="add-to-cart-btn" data-name="Elegant Navy Midi" data-price="549.00" aria-label="Add Elegant Navy Midi to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="official (4).jpg" alt="Violet Elegant Skirt" loading="lazy">
+            <h3>Violet Elegant Skirt</h3>
+            <p>Available in sizes X, XXL, XL and L.</p>
+            <p class="price">KES 549.00</p>
+            <button class="add-to-cart-btn" data-name="Violet Elegant Skirt" data-price="549.00" aria-label="Add Violet Elegant Skirt to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="official (2).jpg" alt="High Waist Boy-Con Skirts" loading="lazy">
+            <h3>High Waist Boy-Con Skirts</h3>
+            <p>Available in sizes 39, 40, 41 and 42.</p>
+            <p class="price">KES 299.00</p>
+            <button class="add-to-cart-btn" data-name="High Waist Boy-Con Skirts" data-price="299.00" aria-label="Add High Waist Boy-Con Skirts to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="official (3).jpg" alt="long High Waist Skirts" loading="lazy">
+            <h3>long High Waist Skirts</h3>
+            <p>Available in sizes 39,40,41 and 42.</p>
+            <p class="price">KES 349.00</p>
+            <button class="add-to-cart-btn" data-name="long High Waist Skirts" data-price="349.00" aria-label="Add long High Waist Skirts to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="official (5).jpg" alt="Purple Chic Pencil" loading="lazy">
+            <h3>Purple Chic Pencil</h3>
+            <p>Available in sizes X, XXL, XL and L.</p>
+            <p class="price">KES 299.00</p>
+            <button class="add-to-cart-btn" data-name="Purple Chic Pencil" data-price="299.00" aria-label="Add Purple Chic Pencil to cart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="products">
+        <h2>Dresses</h2>
+        <hr class="center-hr">
+    </div>
+    <div class="product_grid">
+        <div class="product">
+            <img src="beatiful-dress-blue-green.jpg" alt="Official Dress" loading="lazy">
+            <h3>Official Dress</h3>
+            <p>Available in sizes X, XX, XL and XXL.</p>
+            <p class="price">KES 1,999.00</p>
+            <button class="add-to-cart-btn" data-name="Official Dress-Blue-Green" data-price="999.00" aria-label="Add Official Dress-Blue-Green to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="beautiful-dress-blue.jpg" alt="Official Dress" loading="lazy">
+            <h3>Official Dress</h3>
+            <p>Available in sizes X, XX, XL and XXL.</p>
+            <p class="price">KES 1,999.00</p>
+            <button class="add-to-cart-btn" data-name="Official Dress-Blue-Lightblue" data-price="999.00" aria-label="Add Official Dress-Blue-Lightblue to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="beautiful-dress.jpg" alt="Official Dress" loading="lazy">
+            <h3>Official Dress</h3>
+            <p>Available in sizes X, XX, XL and XXL.</p>
+            <p class="price">KES 1,999.00</p>
+            <button class="add-to-cart-btn" data-name="Official Dress-Blue-Yellow" data-price="999.00" aria-label="Add Official Dress-Blue-Yellow to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="beautiful-dress-blue-orange.jpg" alt="Official Dress" loading="lazy">
+            <h3>Official Dress</h3>
+            <p>Available in sizes X, XXL, XL and L.</p>
+            <p class="price">KES 1,999.00</p>
+            <button class="add-to-cart-btn" data-name="Official Dress-Blue-Orange" data-price="999.00" aria-label="Add Official Dress-Blue-Orange to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="dress.jpg" alt="Beautiful Green Dress" loading="lazy">
+            <h3>Beautiful Green dress</h3>
+            <p>Available in sizes X, XXL, XL and L.</p>
+            <p class="price">KES 979.00</p>
+            <button class="add-to-cart-btn" data-name="Beautiful Green Dress" data-price="999.00" aria-label="Add Beautiful Green Dress to cart">Add to Cart</button>
+        </div>
+    </div>
+    </section>
+    <footer class="footer" id="footer-contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Reinah Collections is dedicated to providing the latest fashion trends for all ages. Either in retail or Wholesale.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Get in touch with us at <a href="mailto:info@reinahcollections.com">info@reinahcollections.co.ke</a>.</p>
+            </div>
+            <div class="footer-section follow-us">
+                <h4>Follow Us</h4>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Follow us on Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow us on Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Follow us on Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="Follow us on TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Follow us on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Reinah Collections. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="reinah_script.js"></script>
+</body>
+</html>

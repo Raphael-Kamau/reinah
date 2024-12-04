@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinah Collections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="reinahstyles.css">
+    <meta name="description" content="Reinah Collections offers the latest fashion trends for all ages, available in retail and wholesale.">
+    <meta name="keywords" content="fashion, retail, wholesale, clothing, accessories">
+</head>
+<body>
+    <!-- Notification Element -->
+    <div id="notification" class="notification" aria-live="polite" aria-atomic="true"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Search Functionality -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+                    <button id="search-button" aria-label="Search">Search</button>
+                </div>
+        
+                <!-- Icons Container -->
+                <div class="icons-container">
+                    <button id="menu-icon" aria-label="Open Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <button id="cart-icon" aria-label="View Cart">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </nav>   
+        </div>
+        <div class="overlay" id="myNav" role="dialog" aria-modal="true" aria-hidden="true">
+            <button class="closebtn" aria-label="Close navigation menu">&times;</button>
+            <div class="overlay-content">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="reinah.html#home">Home</a></li>
+                    <li><a href="reinah.html#products">Products</a></li>
+                    <li><a href="reinah.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal" role="dialog" aria-labelledby="cartModalTitle" aria-hidden="true" tabindex="-1">
+        <div class="modal-content">
+            <span class="close" aria-label="Close cart modal">&times;</span>
+            <h2 id="cartModalTitle">Your Cart</h2>
+            <div id="cart-items"></div> <!-- Container for cart items -->
+            <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <section class="products-section" id="products">
+        <div class="products">
+            <h2>Bags</h2>
+            <hr class="center-hr">
+        </div>
+        <div class="product_grid">
+            <div class="product">
+                <img src="hand-bag-balmaparis-black.jpg" alt="Black and White Hand Bag" loading="lazy">
+                <h3>Hand Bag</h3>
+                <p>Black-White</p>
+                <p class="price">KES 1,999.00</p>
+                <button class="add-to-cart-btn" data-name="Black and White Hand Bag" data-price="1,999.00" aria-label="Add Black and White Hand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-balmaparis-blackpattern.jpg" alt="Black and White Pattern Hand Bag" loading="lazy">
+                <h3>Hand Bag</h3>
+                <p>Black-White Pattern</p>
+                <p class="price">KES 1,999.00</p>
+                <button class="add-to-cart-btn" data-name="Black and White Pattern Hand Bag" data-price="1,999.00" aria-label="Add Black and White Pattern Hand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-balmaparis-brown-black.jpg" alt="Brown, White, and Black Hand Bag" loading="lazy">
+                <h3>Hand Bag</h3>
+                <p>Brown-White-Black</p>
+                <p class="price">KES 1,999.00</p>
+                <button class="add-to-cart-btn" data-name="Brown, White, and Black Hand Bag" data-price="1,999.00" aria-label="Add Brown, White, and Black Hand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-balmaparis-cream-brown.jpg" alt="Cream and Brown Hand Bag" loading="lazy">
+                <h3>Hand Bag</h3>
+                <p>Cream-Brown</p>
+                <p class="price">KES 1,999.00</p>
+                <button class="add-to-cart-btn" data-name="Cream and Brown Hand Bag" data-price="1,999.00" aria-label="Add Cream and Brown Hand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-balmaparis-white-black.jpg" alt="White and Black Hand Bag" loading="lazy">
+                <h3>Hand Bag</h3>
+                <p>White-Black</p>
+                <p class="price">KES 1,999.00</p>
+                <button class="add-to-cart-btn" data-name="White and Black Hand Bag" data-price="1,999.00" aria-label="Add White and Black Hand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-balmaparis-white-pink.jpg" alt="White and Pink Hand Bag" loading="lazy">
+                <h3>Hand Bag</h3>
+                <p>White-Pink</p>
+                <p class="price">KES 1,999.00</p>
+                <button class="add-to-cart-btn" data-name="White and Pink Hand Bag" data-price="1,999.00" aria-label="Add White and Pink Hand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hang-bag-c.jpg" alt="Blue Hang Bag" loading="lazy">
+                <h3>Hang Bag</h3>
+                <p>Blue</p>
+                <p class="price">KES 1,799.00</p>
+                <button class="add-to-cart-btn" data-name="Blue Hang Bag" data-price="1,799.00" aria-label="Add Blue Hang Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hang-bag-d.jpg" alt="Black Hang Bag" loading="lazy">
+                <h3>Hang Bag</h3>
+                <p>Gray</p>
+                <p class="price">KES 1,799.00</p>
+                <button class="add-to-cart-btn" data-name="Black Hang Bag" data-price="1,799.00" aria-label="Add Gray Hang Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hang-bag-black.jpg" alt="Black Hang Bag" loading="lazy">
+                <h3>Hang Bag</h3>
+                <p>Black</p>
+                <p class="price">KES 1,799.00</p>
+                <button class="add-to-cart-btn" data-name="Black Hang Bag" data-price="1,799.00" aria-label="Add Black Hang Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hang-bag-coffe_brown.jpg" alt="Brown Hang Bag" loading="lazy">
+                <h3>Hang Bag</h3>
+                <p>Brown</p>
+                <p class="price">KES 1,799.00</p>
+                <button class="add-to-cart-btn" data-name="Brown Hang Bag" data-price="1,799.00" aria-label="Add Brown Hang Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hang-bag-gold.jpg" alt="Golden Hang Bag" loading="lazy">
+                <h3>Hang Bag</h3>
+                <p>Golden</p>
+                <p class="price">KES 1,799.00</p>
+                <button class="add-to-cart-btn" data-name="Golden Hang Bag" data-price="1,799.00" aria-label="Add Golden Hang Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hang-bag-yellow.jpg" alt="Black Hang Bag" loading="lazy">
+                <h3>Hang Bag</h3>
+                <p>Yellow</p>
+                <p class="price">KES 1,799.00</p>
+                <button class="add-to-cart-btn" data-name="Yellow Hang Bag" data-price="1,799.00" aria-label="Add Yellow Hang Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-black-maroon.jpg" alt="Black, Maroon, and White Hand Bag" loading="lazy">
+                <h3>Hand Bag</h3>
+                <p>Black-Maroon-White</p>
+                <p class="price">KES 2,499.00</p>
+                <button class="add-to-cart-btn" data-name="Black, Maroon, and White Hand Bag" data-price="2,499.00" aria-label="Add Black, Maroon, and White Hand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-B-pinkcream.jpg" alt="Brown, Pink, and Black Hand Bag" loading="lazy">
+                <h3>Hand Bag</h3>
+                <p>Brown-Pink-Black</p>
+                <p class="price">KES 2,499.00</p>
+                <button class="add-to-cart-btn" data-name="Brown, Pink, and Black Hand Bag" data-price="2,499.00" aria-label="Add Brown, Pink, and Black Hand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-B-grey.jpg" alt="Brown, Gray, and Black Hand Bag" loading="lazy">
+                <h3>Hand Bag</h3>
+                <p>Brown-Gray-Black</p>
+                <p class="price">KES 2,499.00</p>
+                <button class="add-to-cart-btn" data-name="Brown, Gray, and Black Hand Bag" data-price="2,499.00" aria-label="Add Brown, Gray, and Black Hand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-chan2ab.jpg" alt="Cream and Brown VHand Bag" loading="lazy">
+                <h3>VHand Bag</h3>
+                <p>Cream-Brown</p>
+                <p class="price">KES 1,999.00</p>
+                <button class="add-to-cart-btn" data-name="Cream and Brown VHand Bag" data-price="1,999.00" aria-label="Add Cream and Brown VHand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-chan2ab (4).jpg" alt="Cream VHand Bag" loading="lazy">
+                <h3>VHand Bag</h3>
+                <p>Cream</p>
+                <p class="price">KES1,999.00</p>
+                <button class="add-to-cart-btn" data-name="Cream VHand Bag" data-price="1,999.00" aria-label="Add Cream VHand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-chan2ab (3).jpg" alt="Black VHand Bag" loading="lazy">
+                <h3>VHand Bag</h3>
+                <p>Black</p>
+                <p class="price">KES 1,999.00</p>
+                <button class="add-to-cart-btn" data-name="Black VHand Bag" data-price="1,999.00" aria-label="Add Black VHand Bag to cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="hand-bag-chan2ab (2).jpg" alt="Gray VHand Bag" loading="lazy">
+                <h3>VHand Bag</h3>
+                <p>Gray</p>
+                <p class="price">KES 1,999.00</p>
+                <button class="add-to-cart-btn" data-name="Gray VHand Bag" data-price="1,999.00" aria-label="Add Gray VHand Bag to cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer-contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Reinah Collections is dedicated to providing the latest fashion trends for all ages. Either in retail or Wholesale.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Get in touch with us at <a href="mailto:info@reinahcollections.com">info@reinahcollections.co.ke</a>.</p>
+            </div>
+            <div class="footer-section follow-us">
+                <h4>Follow Us</h4>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Follow us on Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow us on Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Follow us on Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="Follow us on TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Follow us on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Reinah Collections. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="reinah_script.js"></script>
+</body>
+</html>

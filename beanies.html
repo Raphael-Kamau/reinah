@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="reinahstyles.css">
+</head>
+<body>
+    <!-- Notification Element -->
+    <div id="notification" class="notification" aria-live="polite" aria-atomic="true"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Search Functionality -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+                    <button id="search-button" aria-label="Search">Search</button>
+                </div>
+        
+                <!-- Icons Container -->
+                <div class="icons-container">
+                    <button id="menu-icon" aria-label="Open Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <button id="cart-icon" aria-label="View Cart">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </nav>   
+        </div>
+        <div class="overlay" id="myNav" role="dialog" aria-modal="true" aria-hidden="true">
+            <button class="closebtn" aria-label="Close navigation menu">&times;</button>
+            <div class="overlay-content">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="reinah.html#home">Home</a></li>
+                    <li><a href="reinah.html#products">Products</a></li>
+                    <li><a href="reinah.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal" role="dialog" aria-labelledby="cartModalTitle" aria-hidden="true" tabindex="-1">
+        <div class="modal-content">
+            <span class="close" aria-label="Close cart modal">&times;</span>
+            <h2 id="cartModalTitle">Your Cart</h2>
+            <div id="cart-items"></div> <!-- Container for cart items -->
+            <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+    <section class="products-section" id="products">
+    <div class="products">
+        <h2>Beanies.</h2>
+        <hr class="center-hr">
+    </div>
+    <div class="product_grid">
+        <div class="product">
+            <img src="beannis.jpg" alt="Beanies" loading="lazy">
+            <h3>Beanies</h3>
+            <p>Gray</p>
+            <p>Available for your kids</p>
+            <p class="price">KES 329.00</p>
+            <button class="add-to-cart-btn" data-name="Beanies-Gray" data-price="329.00" aria-label="Add Beanies-Gray to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="beannies.jpg" alt="Beanies" loading="lazy">
+            <h3>Beanies</h3>
+            <p>Red</p>
+            <p>Available for your kids</p>
+            <p class="price">KES 329.00</p>
+            <button class="add-to-cart-btn" data-name="Beanies-Red" data-price="329.00" aria-label="Add Beanies-Red to cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="beannies (2).jpg" alt="Beanies" loading="lazy">
+            <h3>Beanies</h3>
+            <p>Yellow-Gray</p>
+            <p>Available for your kids</p>
+            <p class="price">KES 329.00</p>
+            <button class="add-to-cart-btn" data-name="Beanies-Yellow-Gray" data-price="329.00" aria-label="Add Beanies-Yellow-Gray to cart">Add to Cart</button>
+        </div>
+    </div>
+    </section>
+    <footer class="footer" id="footer-contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Reinah Collections is dedicated to providing the latest fashion trends for all ages. Either in retail or Wholesale.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Get in touch with us at <a href="mailto:info@reinahcollections.com">info@reinahcollections.co.ke</a>.</p>
+            </div>
+            <!-- Updated Font Awesome class for Twitter -->
+            <div class="footer-section follow-us">
+                <h4>Follow Us</h4>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Follow us on Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow us on Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Follow us on Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="Follow us on TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Follow us on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Reinah Collections. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="reinah_script.js"></script>
+</body>
+</html>
